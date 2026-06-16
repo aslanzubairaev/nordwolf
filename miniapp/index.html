@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#080b0f" />
+    <title>NordWolf</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section class="app-card screen is-active" data-screen="welcome" aria-labelledby="welcome-title">
+        <div class="brand-mark" aria-hidden="true">
+          <span>N</span>
+        </div>
+
+        <div class="welcome-copy">
+          <p class="eyebrow">Фитнес-бот в Telegram</p>
+          <h1 id="welcome-title">NordWolf</h1>
+          <p class="lead">
+            Контролируйте питание, тренировки и прогресс в одном спокойном ритме.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-start-onboarding>
+            Начать
+          </button>
+          <p class="subtle-note">
+            Далее - короткая настройка профиля.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-goal" aria-labelledby="goal-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 1</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="goal-title">Выберите цель</h2>
+          <p class="lead compact-lead">
+            NordWolf настроит первый контур под ваш фокус.
+          </p>
+        </div>
+
+        <div class="goal-options" role="radiogroup" aria-labelledby="goal-title">
+          <button class="goal-option" type="button" role="radio" aria-checked="false" data-goal="fat-loss">
+            <span class="goal-title">Похудеть</span>
+            <span class="goal-meta">Снижение веса и контроль питания</span>
+          </button>
+          <button class="goal-option" type="button" role="radio" aria-checked="false" data-goal="muscle-gain">
+            <span class="goal-title">Набрать массу</span>
+            <span class="goal-meta">Рост силы, объема и тренировочного ритма</span>
+          </button>
+          <button class="goal-option" type="button" role="radio" aria-checked="false" data-goal="maintenance">
+            <span class="goal-title">Поддерживать форму</span>
+            <span class="goal-meta">Стабильность, привычки и прогресс без шума</span>
+          </button>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-goal>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-goal-note>
+            Выберите один вариант.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-sex" aria-labelledby="sex-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 2</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="sex-title">Укажите пол</h2>
+          <p class="lead compact-lead">
+            Это поможет точнее настроить дальнейшие шаги.
+          </p>
+        </div>
+
+        <div class="goal-options" role="radiogroup" aria-labelledby="sex-title">
+          <button class="goal-option" type="button" role="radio" aria-checked="false" data-sex="male">
+            <span class="goal-title">Мужчина</span>
+            <span class="goal-meta">Мужской профиль расчёта</span>
+          </button>
+          <button class="goal-option" type="button" role="radio" aria-checked="false" data-sex="female">
+            <span class="goal-title">Женщина</span>
+            <span class="goal-meta">Женский профиль расчёта</span>
+          </button>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-sex>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-sex-note>
+            Выберите один вариант.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-age" aria-labelledby="age-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 3</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="age-title">Возраст</h2>
+          <p class="lead compact-lead">
+            Укажите полный возраст. Этого достаточно для следующего шага.
+          </p>
+        </div>
+
+        <label class="input-panel" for="age-input">
+          <span class="input-label">Возраст</span>
+          <input
+            id="age-input"
+            class="numeric-input"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            pattern="[0-9]*"
+            maxlength="2"
+            placeholder="30"
+            data-age-input
+          />
+          <span class="input-helper">Допустимый диапазон: 14-80.</span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-age>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-age-note>
+            Введите возраст числом.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-height" aria-labelledby="height-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 4</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="height-title">Рост</h2>
+          <p class="lead compact-lead">
+            Укажите рост в сантиметрах. Одно число, без лишних деталей.
+          </p>
+        </div>
+
+        <label class="input-panel" for="height-input">
+          <span class="input-label">Рост, см</span>
+          <input
+            id="height-input"
+            class="numeric-input"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            pattern="[0-9]*"
+            maxlength="3"
+            placeholder="180"
+            data-height-input
+          />
+          <span class="input-helper">Допустимый диапазон: 120-230 см.</span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-height>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-height-note>
+            Введите рост числом.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-weight" aria-labelledby="weight-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 5</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="weight-title">Вес</h2>
+          <p class="lead compact-lead">
+            Укажите текущий вес в килограммах. Можно с одним знаком после точки.
+          </p>
+        </div>
+
+        <label class="input-panel" for="weight-input">
+          <span class="input-label">Вес, кг</span>
+          <input
+            id="weight-input"
+            class="numeric-input"
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            maxlength="5"
+            placeholder="78"
+            data-weight-input
+          />
+          <span class="input-helper">Допустимый диапазон: 35-250 кг.</span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-weight>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-weight-note>
+            Введите вес числом.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-activity" aria-labelledby="activity-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Шаг 6</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Онбординг</p>
+          <h2 id="activity-title">Активность</h2>
+          <p class="lead compact-lead">
+            Выберите обычный уровень движения и тренировок.
+          </p>
+        </div>
+
+        <div class="goal-options compact-options" role="radiogroup" aria-labelledby="activity-title">
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-activity="low">
+            <span class="goal-title">Низкая</span>
+            <span class="goal-meta">Сидячий день, мало движения</span>
+          </button>
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-activity="moderate">
+            <span class="goal-title">Умеренная</span>
+            <span class="goal-meta">Обычная активность, ходьба или редкие тренировки</span>
+          </button>
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-activity="high">
+            <span class="goal-title">Высокая</span>
+            <span class="goal-meta">Регулярные тренировки и активный ритм</span>
+          </button>
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-activity="very-high">
+            <span class="goal-title">Очень высокая</span>
+            <span class="goal-meta">Много движения, частые тренировки или физическая работа</span>
+          </button>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" disabled data-continue-activity>
+            Продолжить
+          </button>
+          <p class="subtle-note" data-activity-note>
+            Выберите один вариант.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-summary" aria-labelledby="summary-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Итог</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Профиль</p>
+          <h2 id="summary-title">Профиль готов</h2>
+          <p class="lead compact-lead">
+            Мы собрали базу для твоего плана в NordWolf.
+          </p>
+        </div>
+
+        <div class="summary-panel" aria-label="Сводка профиля">
+          <div class="summary-row">
+            <span>Цель</span>
+            <strong data-summary-goal>—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Пол</span>
+            <strong data-summary-sex>—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Возраст</span>
+            <strong data-summary-age>—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Рост</span>
+            <strong data-summary-height>—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Вес</span>
+            <strong data-summary-weight>—</strong>
+          </div>
+          <div class="summary-row">
+            <span>Активность</span>
+            <strong data-summary-activity>—</strong>
+          </div>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-continue-summary>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            На следующем шаге NordWolf подготовит персональные ориентиры по питанию и прогрессу.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-plan-prep" aria-labelledby="plan-prep-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Подготовка</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">План</p>
+          <h2 id="plan-prep-title">План почти готов</h2>
+          <p class="lead compact-lead">
+            NordWolf собрал базовый профиль и готов перейти к персональным ориентирам.
+          </p>
+        </div>
+
+        <div class="focus-panel" aria-label="Основные направления">
+          <div class="focus-chip">Питание</div>
+          <div class="focus-chip">Тренировки</div>
+          <div class="focus-chip">Прогресс</div>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-continue-plan-prep>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            На следующем шаге мы покажем первую персональную основу.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="onboarding-targets-result" aria-labelledby="targets-result-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Результат</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Результат</p>
+          <h2 id="targets-result-title">Твоя база готова</h2>
+          <p class="lead compact-lead">
+            NordWolf подготовил первые ориентиры для старта.
+          </p>
+        </div>
+
+        <div class="result-panel" aria-label="Краткий профиль">
+          <div class="result-row">
+            <span>Цель</span>
+            <strong data-result-goal>—</strong>
+          </div>
+          <div class="result-row">
+            <span>Возраст</span>
+            <strong data-result-age>—</strong>
+          </div>
+          <div class="result-row">
+            <span>Рост</span>
+            <strong data-result-height>—</strong>
+          </div>
+          <div class="result-row">
+            <span>Вес</span>
+            <strong data-result-weight>—</strong>
+          </div>
+          <div class="result-row">
+            <span>Активность</span>
+            <strong data-result-activity>—</strong>
+          </div>
+        </div>
+
+        <div class="guidance-panel" aria-label="Первые ориентиры">
+          <p class="guidance-title" data-target-guidance-title>Ориентиры</p>
+          <ul class="guidance-list">
+            <li data-target-guidance-1>—</li>
+            <li data-target-guidance-2>—</li>
+            <li data-target-guidance-3>—</li>
+          </ul>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-continue-targets-result>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            На следующем шаге откроется первый экран личного плана.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="dashboard-home" aria-labelledby="dashboard-home-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Дом</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Панель</p>
+          <h2 id="dashboard-home-title">Твой старт</h2>
+          <p class="lead compact-lead" data-dashboard-focus>
+            Сегодняшний фокус
+          </p>
+        </div>
+
+        <div class="dashboard-grid" aria-label="Основные разделы">
+          <button class="dashboard-card" type="button" data-dashboard-open="nutrition">
+            <span class="dashboard-card-title">Питание</span>
+            <span class="dashboard-card-meta">Первый приём пищи</span>
+          </button>
+          <button class="dashboard-card" type="button" data-dashboard-open="workouts">
+            <span class="dashboard-card-title">Тренировки</span>
+            <span class="dashboard-card-meta">План ближайшей сессии</span>
+          </button>
+          <button class="dashboard-card" type="button" data-dashboard-open="progress">
+            <span class="dashboard-card-title">Прогресс</span>
+            <span class="dashboard-card-meta">Контроль динамики</span>
+          </button>
+        </div>
+
+        <div class="next-block">
+          <p class="next-block-title">Дневной фокус</p>
+          <p class="next-block-copy" data-dashboard-daily-focus>
+            Начни с первой записи питания.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-dashboard-primary>
+            Записать приём пищи
+          </button>
+          <p class="subtle-note">
+            Короткий вход в текущий день.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-home" aria-labelledby="nutrition-home-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-home-title">Питание</h2>
+          <p class="lead compact-lead" data-nutrition-focus>
+            Начни с простого: фиксируй приёмы пищи и держи режим под контролем.
+          </p>
+        </div>
+
+        <div class="nutrition-grid" aria-label="Действия по питанию">
+          <button class="dashboard-card" type="button" data-nutrition-open="log">
+            <span class="dashboard-card-title">Записать приём пищи</span>
+            <span class="dashboard-card-meta">Быстро занеси текущий приём</span>
+          </button>
+          <button class="dashboard-card" type="button" data-nutrition-open="quick">
+            <span class="dashboard-card-title">Быстрый ввод</span>
+            <span class="dashboard-card-meta">Самый короткий сценарий</span>
+          </button>
+          <button class="dashboard-card" type="button" data-nutrition-open="last">
+            <span class="dashboard-card-title">Последний приём</span>
+            <span class="dashboard-card-meta">Повтори недавнюю запись</span>
+          </button>
+          <button class="dashboard-card" type="button" data-nutrition-open="focus">
+            <span class="dashboard-card-title">Фокус по питанию</span>
+            <span class="dashboard-card-meta">Короткий ориентир на день</span>
+          </button>
+        </div>
+
+        <div class="next-block">
+          <p class="next-block-title">Дневной фокус</p>
+          <p class="next-block-copy" data-nutrition-daily-focus>
+            Начни с первого приёма пищи сегодня.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-nutrition-primary>
+            Записать приём пищи
+          </button>
+          <p class="subtle-note">
+            Раздел пока работает в лёгком V1-формате.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-log-entry" aria-labelledby="nutrition-log-entry-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-log-entry-title">Запись питания</h2>
+          <p class="lead compact-lead">
+            Напиши еду простыми словами, как в Telegram.
+          </p>
+        </div>
+
+        <div class="guidance-panel" aria-label="Примеры записи">
+          <p class="guidance-title">Примеры</p>
+          <ul class="guidance-list">
+            <li>200 г риса</li>
+            <li>4 яйца</li>
+            <li>курица и салат</li>
+          </ul>
+        </div>
+
+        <label class="entry-panel" for="nutrition-log-input">
+          <span class="input-label">Что съел</span>
+          <input
+            class="text-input"
+            id="nutrition-log-input"
+            data-nutrition-log-input
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            placeholder="Например: курица и рис"
+          />
+          <span class="input-helper" data-nutrition-log-note>
+            Опиши еду коротко и по делу.
+          </span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-nutrition-log-continue disabled>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            Следующим шагом откроется краткая проверка записи.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-log-review" aria-labelledby="nutrition-log-review-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-log-review-title">Проверь запись</h2>
+          <p class="lead compact-lead">
+            Вот что NordWolf получил от тебя.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Запись питания">
+          <p class="review-label">Запись</p>
+          <p class="review-text" data-nutrition-log-review-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-nutrition-log-confirm>
+            Подтвердить
+          </button>
+          <button class="secondary-action" type="button" data-nutrition-log-edit>
+            Изменить
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-log-confirm" aria-labelledby="nutrition-log-confirm-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-log-confirm-title">Запись подтверждена</h2>
+          <p class="lead compact-lead">
+            Текст принят и готов к следующему шагу.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Подтверждённая запись">
+          <p class="review-label">Подтверждено</p>
+          <p class="review-text" data-nutrition-log-confirm-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-nutrition-log-new>
+            Новая запись
+          </button>
+          <button class="secondary-action" type="button" data-nutrition-log-home>
+            В раздел Питание
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-quick-entry-next" aria-labelledby="nutrition-quick-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-quick-title">Быстрый ввод</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — компактный режим быстрого добавления.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-last-meal-next" aria-labelledby="nutrition-last-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-last-title">Последний приём</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — повтор недавней записи без лишних действий.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="nutrition-focus-next" aria-labelledby="nutrition-focus-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Питание</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Питание</p>
+          <h2 id="nutrition-focus-title">Фокус по питанию</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — короткий ориентир на день.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-home" aria-labelledby="training-home-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-home-title">Тренировки</h2>
+          <p class="lead compact-lead" data-training-focus>
+            Держи ритм тренировок и отмечай ключевые шаги без лишней сложности.
+          </p>
+        </div>
+
+        <div class="training-grid" aria-label="Действия по тренировкам">
+          <button class="dashboard-card" type="button" data-training-open="log">
+            <span class="dashboard-card-title">Записать тренировку</span>
+            <span class="dashboard-card-meta">Добавь текущую сессию</span>
+          </button>
+          <button class="dashboard-card" type="button" data-training-open="quick">
+            <span class="dashboard-card-title">Быстрый старт</span>
+            <span class="dashboard-card-meta">Короткий путь без лишних шагов</span>
+          </button>
+          <button class="dashboard-card" type="button" data-training-open="last">
+            <span class="dashboard-card-title">Последняя тренировка</span>
+            <span class="dashboard-card-meta">Повтори недавнюю сессию</span>
+          </button>
+          <button class="dashboard-card" type="button" data-training-open="focus">
+            <span class="dashboard-card-title">Фокус по тренировкам</span>
+            <span class="dashboard-card-meta">Короткий ориентир на день</span>
+          </button>
+        </div>
+
+        <div class="next-block">
+          <p class="next-block-title">Дневной фокус</p>
+          <p class="next-block-copy" data-training-daily-focus>
+            Начни с фиксации сегодняшней тренировки.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-training-primary>
+            Записать тренировку
+          </button>
+          <p class="subtle-note">
+            Раздел пока работает в лёгком V1-формате.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-log-entry" aria-labelledby="training-log-entry-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-log-entry-title">Запись тренировки</h2>
+          <p class="lead compact-lead">
+            Опиши тренировку простыми словами.
+          </p>
+        </div>
+
+        <div class="guidance-panel" aria-label="Примеры записи">
+          <p class="guidance-title">Примеры</p>
+          <ul class="guidance-list">
+            <li>жим + присед</li>
+            <li>бег 30 минут</li>
+            <li>спина и бицепс</li>
+          </ul>
+        </div>
+
+        <label class="entry-panel" for="training-log-input">
+          <span class="input-label">Что сделал</span>
+          <input
+            class="text-input"
+            id="training-log-input"
+            data-training-log-input
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            placeholder="Например: бег 30 минут"
+          />
+          <span class="input-helper" data-training-log-note>
+            Опиши тренировку коротко и по делу.
+          </span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-training-log-continue disabled>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            Следующим шагом откроется краткая проверка записи.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-log-review" aria-labelledby="training-log-review-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-log-review-title">Проверь тренировку</h2>
+          <p class="lead compact-lead">
+            Вот что NordWolf получил от тебя.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Запись тренировки">
+          <p class="review-label">Запись</p>
+          <p class="review-text" data-training-log-review-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-training-log-confirm>
+            Подтвердить
+          </button>
+          <button class="secondary-action" type="button" data-training-log-edit>
+            Изменить
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-log-confirm" aria-labelledby="training-log-confirm-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-log-confirm-title">Тренировка подтверждена</h2>
+          <p class="lead compact-lead">
+            Текст принят и готов к следующему шагу.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Подтверждённая тренировка">
+          <p class="review-label">Подтверждено</p>
+          <p class="review-text" data-training-log-confirm-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-training-log-new>
+            Новая запись
+          </button>
+          <button class="secondary-action" type="button" data-training-log-home>
+            В раздел Тренировки
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-quick-start-next" aria-labelledby="training-quick-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-quick-title">Быстрый старт</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — компактный сценарий быстрого старта.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-last-session-next" aria-labelledby="training-last-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-last-title">Последняя тренировка</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — повтор недавней тренировки без лишних действий.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="training-focus-next" aria-labelledby="training-focus-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Тренировки</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Тренировки</p>
+          <h2 id="training-focus-title">Фокус по тренировкам</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — короткий ориентир на тренировочный день.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-home" aria-labelledby="progress-home-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-home-title">Прогресс</h2>
+          <p class="lead compact-lead" data-progress-focus>
+            Следи за изменениями спокойно и регулярно, без перегруза и лишнего шума.
+          </p>
+        </div>
+
+        <div class="progress-grid" aria-label="Действия по прогрессу">
+          <button class="dashboard-card" type="button" data-progress-open="weight">
+            <span class="dashboard-card-title">Записать вес</span>
+            <span class="dashboard-card-meta">Быстрая фиксация текущего значения</span>
+          </button>
+          <button class="dashboard-card" type="button" data-progress-open="checkin">
+            <span class="dashboard-card-title">Отметить прогресс</span>
+            <span class="dashboard-card-meta">Короткая отметка состояния</span>
+          </button>
+          <button class="dashboard-card" type="button" data-progress-open="last">
+            <span class="dashboard-card-title">Последняя запись</span>
+            <span class="dashboard-card-meta">Повтори недавний ввод</span>
+          </button>
+          <button class="dashboard-card" type="button" data-progress-open="focus">
+            <span class="dashboard-card-title">Фокус по прогрессу</span>
+            <span class="dashboard-card-meta">Короткий ориентир на день</span>
+          </button>
+        </div>
+
+        <div class="next-block">
+          <p class="next-block-title">Дневной фокус</p>
+          <p class="next-block-copy" data-progress-daily-focus>
+            Начни с фиксации текущего веса.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-progress-primary>
+            Записать вес
+          </button>
+          <p class="subtle-note">
+            Раздел пока работает в лёгком V1-формате.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-weight-log-entry" aria-labelledby="progress-weight-entry-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-weight-entry-title">Запись веса</h2>
+          <p class="lead compact-lead">
+            Укажи текущий вес, чтобы NordWolf мог отслеживать прогресс.
+          </p>
+        </div>
+
+        <div class="guidance-panel" aria-label="Примеры веса">
+          <p class="guidance-title">Примеры</p>
+          <ul class="guidance-list">
+            <li>78</li>
+            <li>82.5</li>
+            <li>91</li>
+          </ul>
+        </div>
+
+        <label class="entry-panel" for="progress-weight-input">
+          <span class="input-label">Текущий вес, кг</span>
+          <input
+            class="numeric-input"
+            id="progress-weight-input"
+            data-progress-weight-input
+            type="text"
+            inputmode="decimal"
+            autocomplete="off"
+            placeholder="Например: 82.5"
+          />
+          <span class="input-helper" data-progress-weight-note>
+            Можно ввести целое число или одну цифру после запятой.
+          </span>
+        </label>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-progress-weight-continue disabled>
+            Продолжить
+          </button>
+          <p class="subtle-note">
+            Следующим шагом откроется краткая проверка записи.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-weight-log-review" aria-labelledby="progress-weight-review-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-weight-review-title">Проверь вес</h2>
+          <p class="lead compact-lead">
+            Вот что NordWolf получил от тебя.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Запись веса">
+          <p class="review-label">Запись</p>
+          <p class="review-text" data-progress-weight-review-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-progress-weight-confirm>
+            Подтвердить
+          </button>
+          <button class="secondary-action" type="button" data-progress-weight-edit>
+            Изменить
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-weight-log-confirm" aria-labelledby="progress-weight-confirm-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-weight-confirm-title">Вес подтверждён</h2>
+          <p class="lead compact-lead">
+            Значение принято и готово к следующему шагу.
+          </p>
+        </div>
+
+        <div class="review-panel" aria-label="Подтверждённый вес">
+          <p class="review-label">Подтверждено</p>
+          <p class="review-text" data-progress-weight-confirm-text>—</p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-progress-weight-new>
+            Новая запись
+          </button>
+          <button class="secondary-action" type="button" data-progress-weight-home>
+            В раздел Прогресс
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-checkin" aria-labelledby="progress-checkin-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-checkin-title">Чек-ин</h2>
+          <p class="lead compact-lead">
+            Коротко отметь, как идёт прогресс.
+          </p>
+        </div>
+
+        <div class="goal-options compact-options" role="radiogroup" aria-labelledby="progress-checkin-title">
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-progress-checkin="on-plan">
+            <span>Иду по плану</span>
+          </button>
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-progress-checkin="setbacks">
+            <span>Есть сбои</span>
+          </button>
+          <button class="goal-option compact-option" type="button" role="radio" aria-checked="false" data-progress-checkin="restart">
+            <span>Нужно перезапуститься</span>
+          </button>
+        </div>
+
+        <div class="next-block">
+          <p class="next-block-title">Подсказка</p>
+          <p class="next-block-copy">
+            Это поможет NordWolf точнее вести тебя дальше.
+          </p>
+        </div>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" data-progress-checkin-continue disabled>
+            Продолжить
+          </button>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-checkin-review-next" aria-labelledby="progress-checkin-review-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-checkin-review-title">Чек-ин почти готов</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — короткая проверка отметки прогресса.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-last-entry-next" aria-labelledby="progress-last-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-last-title">Последняя запись</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — повтор недавней записи без лишних действий.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-card screen" data-screen="progress-focus-next" aria-labelledby="progress-focus-title">
+        <div class="step-header">
+          <div class="brand-mark compact" aria-hidden="true">
+            <span>N</span>
+          </div>
+          <p class="step-count">Прогресс</p>
+        </div>
+
+        <div class="step-copy final-step">
+          <p class="eyebrow">Прогресс</p>
+          <h2 id="progress-focus-title">Фокус по прогрессу</h2>
+          <p class="lead compact-lead">
+            Следующий шаг — короткий ориентир на прогресс дня.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
