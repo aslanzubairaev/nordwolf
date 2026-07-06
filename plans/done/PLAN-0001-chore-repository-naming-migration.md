@@ -1,6 +1,6 @@
 ---
 id: PLAN-0001
-status: Active
+status: Done
 work_type: chore
 work_area: repository
 impacted_areas: ["specs", "docs"]
@@ -56,8 +56,8 @@ None.
 - [x] Verify `git status --short`.
 - [x] Verify `git remote -v`.
 - [x] Update relevant changelogs.
-- [ ] Rebase the branch on latest `dev` before marking the plan Done, if a plan branch is created.
-- [ ] Rerun impacted validation after rebase or conflict fixes.
+- [x] Rebase the branch on latest `dev` before marking the plan Done, if a plan branch is created.
+- [x] Rerun impacted validation after rebase or conflict fixes.
 
 ## Human Verification
 
@@ -101,16 +101,16 @@ This migration includes external and local-path operations that require human-vi
 - `git remote -v`: points to `https://github.com/aslanzubairaev/nordwolf.git`.
 - Local folder path: reopened and verified at `C:\dev\NordWolf`.
 - Git branches: `dev` exists locally and on `origin/dev`; current work is on `plan-0001-chore-repository-naming-migration`.
+- Rebase status: `git rebase origin/dev` reported the plan branch is up to date.
+- Human verification confirmation: Human confirmed agreement to close the plan after the local folder rename, GitHub repository rename, remote update, `dev` branch setup, and successful automated checks.
 - Preserved historical `Forma Prime` references: `fix-06-review-pack.md`, legacy `sdd/`, accepted specs that intentionally describe legacy context.
 
 ## Completion Notes
 
-Fill this when moving the plan to `plans/done/`.
-
-- Approval summary:
-- Final validation:
-- Human verification:
-- Changelog updates:
-- Rebase status:
-- Push/PR status:
-- State reversals:
+- Approval summary: Human approved the naming migration plan, confirmed the local folder and GitHub repository rename direction, approved creating/pushing `dev`, and confirmed agreement to close the plan on 2026-07-06.
+- Final validation: `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run build`, `npm.cmd test`, and `npm.cmd run review:hook` passed before completion. After moving the plan to `plans/done/`, `npm.cmd run validate`, `npm.cmd run review:hook`, `npm.cmd run validate:pre-commit`, and `npm.cmd run validate:pre-push` passed.
+- Human verification: Human confirmed agreement after the rename, remote update, `dev` setup, and automated checks were reported.
+- Changelog updates: Updated `changelogs/repository.md`, `changelogs/docs.md`, and `changelogs/specs.md`.
+- Rebase status: `git fetch origin` completed and `git rebase origin/dev` reported the branch was up to date.
+- Push/PR status: Pending completion commit and push.
+- State reversals: None.

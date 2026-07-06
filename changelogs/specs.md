@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-06 - PLAN-0001 - Complete NORDWOLF naming migration specs
+
+- Branch/PR: `plan-0001-chore-repository-naming-migration`
+- Work area: `repository`
+- Impacted areas: `specs`, `docs`
+- Spec refs: `SPEC-GLOBAL-001`, `SPEC-FEATURE-001`
+- Change request refs: None
+- Summary: Completed the plan that made the accepted NORDWOLF Global Spec and naming migration Feature Spec active project authority through the accepted manifest.
+- Tests/validations: `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run review:hook`
+- Human verification: Human confirmed agreement to close the naming migration plan after local and GitHub rename verification.
+- Manual operations: None
+
 ## 2026-07-06 - SPEC-FEATURE-001 - Accept NORDWOLF naming migration
 
 - Branch/PR: Not applicable
