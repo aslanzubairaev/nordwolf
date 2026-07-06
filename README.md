@@ -1,8 +1,10 @@
-# Forma Prime
+# NORDWOLF
 
-Forma Prime is an existing Telegram bot project migrated into the official SDD-GEN structure after the application had already been built.
+NORDWOLF is a Telegram bot and Telegram Mini App project managed through the official SDD-GEN workflow.
 
-The repository is in SDD bootstrap mode. No accepted client specifications exist yet, and product implementation work should wait until the first client Global Spec is created, reviewed, accepted, and declared in `specs/accepted/manifest.json`.
+This repository was previously named `Forma Prime`. That name is legacy context only; accepted SDD specifications now define the product and migration direction.
+
+The repository has exited initial SDD bootstrap mode. Product and repository work must follow accepted specs declared in `specs/accepted/manifest.json`.
 
 ## Application
 
@@ -38,6 +40,6 @@ npm run review:hook
 npm run hooks:install
 ```
 
-## Bootstrap Next Step
+## Current Next Step
 
-Use the raw knowledge file to prepare the first client Global Spec. Do not treat raw knowledge or legacy SDD documents as accepted product requirements.
+Follow the active plan in `plans/active/` when one exists. Do not treat raw knowledge or legacy SDD documents as accepted product requirements.

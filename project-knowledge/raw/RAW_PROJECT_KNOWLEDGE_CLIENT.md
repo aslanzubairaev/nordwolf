@@ -7,9 +7,9 @@ It is not an accepted specification and must not be used as implementation autho
 ## Confirmed Product Decisions
 
 - The official user-facing product name is `NORDWOLF`.
-- The local folder and GitHub repository may temporarily remain named `Forma Prime`.
-- Do not rename files, folders, repository settings, code identifiers, PM2 configuration, or user-facing text yet.
-- Naming cleanup is future work and must go through the official SDD-GEN workflow before implementation.
+- The local folder and GitHub repository were originally named `Forma Prime`; accepted SDD work now governs the migration toward NORDWOLF naming.
+- Naming cleanup is now governed by accepted `SPEC-FEATURE-001` and active `PLAN-0001`.
+- Application code identifiers, PM2 configuration, and user-facing text should remain unchanged unless a future accepted spec or the active migration plan explicitly covers the change.
 
 ## Verified Implemented Behavior
 
@@ -45,8 +45,8 @@ These points are observations from code and copy. They are not confirmed product
 
 - The Mini App appears to be a static client-side prototype or V1 flow; no backend API integration was found in the inspected files.
 - Some Mini App screens describe "next" or V1-style placeholder flows, especially around quick entries, last entries, focus screens, and progress check-in review.
-- The repository folder and migrated SDD context still use `Forma Prime`, while the confirmed official user-facing product name is `NORDWOLF`.
-- Existing migration names reference earlier `spec_*` work, but the official SDD-GEN `specs/accepted/manifest.json` is intentionally empty during this migration.
+- The repository originated as `Forma Prime`, while the confirmed official user-facing product name is `NORDWOLF`.
+- Existing migration names reference earlier `spec_*` work. Official SDD-GEN accepted specs are governed by `specs/accepted/manifest.json`.
 - Legacy SDD documents exist in `sdd/`, but they have not been converted into official SDD-GEN specs.
 
 ## Planned Ideas Found In Documentation
