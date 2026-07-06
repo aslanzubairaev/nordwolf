@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "specs": [
+    {
+      "id": "SPEC-GLOBAL-001",
+      "type": "GlobalSpec",
+      "status": "Accepted",
+      "title": "NORDWOLF product vision",
+      "path": "specs/accepted/SPEC-GLOBAL-001-nordwolf-product-vision.md",
+      "parent": null,
+      "depends_on": [],
+      "related_specs": []
+    },
+    {
+      "id": "SPEC-FEATURE-001",
+      "type": "FeatureSpec",
+      "status": "Accepted",
+      "title": "NORDWOLF naming migration",
+      "path": "specs/accepted/SPEC-FEATURE-001-nordwolf-naming-migration.md",
+      "parent": "SPEC-GLOBAL-001",
+      "depends_on": [],
+      "related_specs": []
+    }
+  ]
+}
