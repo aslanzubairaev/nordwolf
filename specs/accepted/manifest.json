@@ -20,6 +20,16 @@
       "parent": "SPEC-GLOBAL-001",
       "depends_on": [],
       "related_specs": []
+    },
+    {
+      "id": "SPEC-FEATURE-002",
+      "type": "FeatureSpec",
+      "status": "Accepted",
+      "title": "Mini App onboarding foundation",
+      "path": "specs/accepted/SPEC-FEATURE-002-mini-app-onboarding-foundation.md",
+      "parent": "SPEC-GLOBAL-001",
+      "depends_on": [],
+      "related_specs": []
     }
   ]
 }

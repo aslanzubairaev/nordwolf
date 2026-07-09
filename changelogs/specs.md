@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-09 - SPEC-FEATURE-002 - Accept Mini App onboarding foundation
+
+- Branch/PR: Not applicable
+- Work area: `specs`
+- Impacted areas: `specs`
+- Spec refs: `SPEC-FEATURE-002`
+- Change request refs: None
+- Summary: Accepted the Mini App onboarding foundation Feature Spec covering bot-to-Mini-App onboarding direction, goal-specific setup, recomposition handling, multilingual private-beta requirements, daily diary-style first home screen, staged bot onboarding transition, and follow-up TechnicalSpec gates for calorie/macro targets and bot/Mini App profile-state contract.
+- Tests/validations: `npm.cmd run review:hook`, `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run validate:ci`
+- Human verification: Human explicitly accepted the Mini App onboarding foundation spec in chat.
+- Manual operations: None
+
 ## 2026-07-06 - PLAN-0001 - Complete NORDWOLF naming migration specs
 
 - Branch/PR: `plan-0001-chore-repository-naming-migration`
