@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-12 - SPEC-TECH-002 - Accept first-version calorie and macro targets
+
+- Branch/PR: Not applicable
+- Work area: `api`
+- Impacted areas: `specs`, `api`
+- Spec refs: `SPEC-TECH-002`, `SPEC-FEATURE-002`
+- Change request refs: None
+- Summary: Accepted the Technical Spec defining first-version calorie and macro target calculation for Mini App onboarding, including Mifflin-St Jeor calorie targets, recomposition mapping, calorie-budgeted macros, safety limits, target availability states, daily tracking compatibility, storage auditability, migration boundaries, and formula verification scenarios.
+- Tests/validations: `npm.cmd run review:hook`, `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run validate:ci`
+- Human verification: Human explicitly accepted the first-version calorie and macro targets Technical Spec in chat.
+- Manual operations: None
+
 ## 2026-07-11 - SPEC-TECH-001 - Accept bot and Mini App onboarding contract
 
 - Branch/PR: Not applicable

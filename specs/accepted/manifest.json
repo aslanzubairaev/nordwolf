@@ -40,6 +40,16 @@
       "parent": "SPEC-FEATURE-002",
       "depends_on": [],
       "related_specs": ["SPEC-FEATURE-002", "SPEC-GLOBAL-001"]
+    },
+    {
+      "id": "SPEC-TECH-002",
+      "type": "TechnicalSpec",
+      "status": "Accepted",
+      "title": "First-version calorie and macro targets",
+      "path": "specs/accepted/SPEC-TECH-002-calorie-macro-targets.md",
+      "parent": "SPEC-FEATURE-002",
+      "depends_on": [],
+      "related_specs": ["SPEC-FEATURE-002", "SPEC-GLOBAL-001"]
     }
   ]
 }
