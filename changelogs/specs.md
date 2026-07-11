@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-11 - SPEC-TECH-001 - Accept bot and Mini App onboarding contract
+
+- Branch/PR: Not applicable
+- Work area: `api`
+- Impacted areas: `specs`, `api`
+- Spec refs: `SPEC-TECH-001`, `SPEC-FEATURE-002`
+- Change request refs: None
+- Summary: Accepted the Technical Spec defining the bot, Mini App, and server onboarding contract, including canonical onboarding states and steps, model versioning, partial draft boundaries, structured errors, idempotent completion, stale-state handling, bot routing, Mini App launch recovery, legacy profile compatibility, and contract acceptance scenarios.
+- Tests/validations: `npm.cmd run review:hook`, `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run validate:ci`
+- Human verification: Human explicitly accepted the bot and Mini App onboarding contract Technical Spec in chat.
+- Manual operations: None
+
 ## 2026-07-09 - SPEC-FEATURE-002 - Accept Mini App onboarding foundation
 
 - Branch/PR: Not applicable
