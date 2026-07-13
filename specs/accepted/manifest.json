@@ -50,6 +50,16 @@
       "parent": "SPEC-FEATURE-002",
       "depends_on": [],
       "related_specs": ["SPEC-FEATURE-002", "SPEC-GLOBAL-001"]
+    },
+    {
+      "id": "SPEC-FEATURE-003",
+      "type": "FeatureSpec",
+      "status": "Accepted",
+      "title": "Nutrition diary foundation",
+      "path": "specs/accepted/SPEC-FEATURE-003-nutrition-diary-foundation.md",
+      "parent": "SPEC-GLOBAL-001",
+      "depends_on": ["SPEC-FEATURE-002", "SPEC-TECH-002"],
+      "related_specs": []
     }
   ]
 }

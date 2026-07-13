@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-14 - SPEC-FEATURE-003 - Accept nutrition diary foundation
+
+- Branch/PR: Not applicable
+- Work area: `features`
+- Impacted areas: `specs`, `features`
+- Spec refs: `SPEC-FEATURE-003`, `SPEC-FEATURE-002`, `SPEC-TECH-002`
+- Change request refs: None
+- Summary: Accepted the nutrition diary foundation Feature Spec covering daily diary dates and timezone behavior, meal sections, consumed and remaining calorie/macro status, unavailable-target behavior, save-error and duplicate protections, bot/Mini App synchronization, quantity handling, multi-food logging, saved-entry correction, and short task-bound AI estimation boundaries.
+- Tests/validations: `npm.cmd run review:hook`, `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run validate:ci`
+- Human verification: Human explicitly accepted the nutrition diary foundation Feature Spec in chat.
+- Manual operations: None
+
 ## 2026-07-12 - SPEC-TECH-002 - Accept first-version calorie and macro targets
 
 - Branch/PR: Not applicable
