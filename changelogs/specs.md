@@ -1,5 +1,17 @@
 # Changelog - Specs
 
+## 2026-07-14 - SPEC-TECH-003 - Accept nutrition diary persistence and API contract
+
+- Branch/PR: Not applicable
+- Work area: `api`
+- Impacted areas: `specs`, `api`, `database`
+- Spec refs: `SPEC-TECH-003`, `SPEC-FEATURE-003`, `SPEC-TECH-002`
+- Change request refs: None
+- Summary: Accepted the Technical Spec defining the nutrition diary persistence and API contract, including Prisma/PostgreSQL source-of-truth boundaries, `MealEntry` and `MealEntryItem` model shape, diary date handling, CRUD operations, diary day response shape, transaction boundaries, idempotency, soft delete, stale edit protection, structured errors, authorization checks, and migration compatibility boundaries.
+- Tests/validations: `npm.cmd run review:hook`, `npm.cmd run validate`, `npm.cmd run validate:pre-commit`, `npm.cmd run validate:pre-push`, `npm.cmd run validate:ci`
+- Human verification: Human explicitly accepted the nutrition diary persistence and API contract Technical Spec in chat.
+- Manual operations: None
+
 ## 2026-07-14 - SPEC-FEATURE-003 - Accept nutrition diary foundation
 
 - Branch/PR: Not applicable
